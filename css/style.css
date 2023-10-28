@@ -1,5 +1,5 @@
 /*!
- * Author: Akash Bhadange
+ * Author: Jashari Besart
  */
 
  body {
@@ -45,13 +45,29 @@ img {
 
 /* Hero Section */
 header.hero {
-  background: url(../assets/hero-bg.jpeg) no-repeat center center fixed;
+  background: url(../assets/hero-bg.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
   padding-bottom: 80px;
+}
+
+/* Logo Section */
+body::before {
+  content: "";
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+  top: 10;
+  right: 10;
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/logo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
 }
 
 header.hero .hero-text {
@@ -78,11 +94,23 @@ header.hero h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 4.5em;
   font-weight: 600;
-  line-height: 1.4em;
+  line-height: 1.4em;    
+  background-color: rgba(0, 0, 0, 0.6);  /* Black background with 50% opacity */
+  padding: 10px;  /* Adding some space around the text */
+  border-radius: 5px;
+  color: white;
+  width: 100%;
 }
 header.hero h1 span,
 header.hero h3 {
   font-weight: 300;
+}
+header.hero h3 {
+  background-color: rgba(0, 0, 0, 0.7);  /* Black background with 50% opacity */
+  padding: 10px;  /* Adding some space around the text */
+  padding-right: 50px;
+  border-radius: 5px;
+  color: white;
 }
 header.hero .btn {
   margin: 3em 0;
@@ -247,7 +275,7 @@ h1.heading.pink:after {
   background-color: #ffbe61;
 }
 .testimonial-box.purple {
-  background-color: #7b32d5;
+  background-color: #222;
 }
 .testimonial-box.blue {
   background-color: #37a7ff;
@@ -452,35 +480,52 @@ ul.main-nav.show-it {
 }
 
 
+/*
+@media screen and (max-device-width: 720px) and (-webkit-min-device-pixel-ratio: 0) {
+  header.hero {
+    background-attachment: scroll;  
+  }
 
-
-
-
-
-
-
+}
+*/
 
 
 
 
 /* Let's optimise it for mobile devices */
 
+
+  
+
 @media (max-width: 720px){
   .btn-lg {
     padding: .8em 3em;
     font-size: .8em;
   }
+
+
+  header.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.4em;    
+    background-color: rgba(0, 0, 0, 0.6);  
+    padding: 10px; 
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    margin-top: 100px;
+  }
+
   h1.heading {
     font-size: 2em;
   }
-  header.hero {
-    text-align: center;
-    padding-bottom: 0;
+  
+  .ios-device header.hero {
+    background-size: auto 20%;  /* oder verwenden Sie 'cover' oder 'contain' */
+    background-position: top;  /* Zentrieren Sie das Hintergrundbild */
   }
-  header.hero h1 {
-    font-size: 2em;
-    margin-top: 1.5em;
-  }
+
   header.hero h3 {
     font-size: 1.2em;
     line-height: 1.6em;
@@ -544,9 +589,3 @@ ul.main-nav.show-it {
     padding: 1em 0em;
   }
 }
-
-
-
-
-
-
